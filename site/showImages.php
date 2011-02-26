@@ -1,5 +1,5 @@
 <?php
-function showImages($folder) {
+function showImages($folder,$size) {
   $path = "images/chunks/".$folder;
   $dir = opendir($path);
 
@@ -27,7 +27,7 @@ function showImages($folder) {
   $imageString = '';
   foreach($images as $key=>$image)
   {
-    $imageString .= '<div class="pixi '.$key.'" key="'.$key.'" folder="'.$folder.'" ><img src="'.$path.'/'.$image.'"/></div>';
+    $imageString .= '<div class="pixi '.$key.'" key="'.$key.'" folder="'.$folder.'" style="width:'.$size.'px; height:'.$size.'px;"><img src="'.$path.'/'.$image.'"/></div>';
   }
 
   return $imageString;

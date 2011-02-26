@@ -45,7 +45,9 @@ function initialize() {
 //window.onload = initialize;
 
 $(document).ready(function(){
-  $('.pixi').each(function() {
-    $(this).load("ajax_image_loader.php?file="+$(this).attr('key')+".jpeg&folder="+$(this).attr('folder'));
+  $('#convertImage').click(function(){
+    $('.pixi').each(function() {
+      $(this).load("ajax_image_loader.php?file="+$(this).attr('key')+".jpeg&folder="+$(this).attr('folder'));
+      });
     });
 });

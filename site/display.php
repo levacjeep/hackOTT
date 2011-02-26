@@ -25,10 +25,12 @@
 </table>
 </form>
 
+<a href="#" id="convertImage">Convert Image</a>
 <?php
-  $details = splitImage("images/grant.jpg","grant",20);
+  $size = 20;
+  $details = splitImage("images/grant.jpg","grant",$size);
   
-  $imageString = showImages("grant");
+  $imageString = showImages("grant",$size);
 ?>
   <div id="chunks" style="width: <?php print $details['width']; ?>px; height: <?php print $details['height']; ?>px;">
     <?php print $imageString;?>
