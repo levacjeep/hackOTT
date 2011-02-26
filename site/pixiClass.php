@@ -2,10 +2,11 @@
 class pixiMatch{
 
   //private $apiurl = 'http://piximilar-rw.hackott.tineye.com/rest/';
-  private $apiurl = 'http://piximilar.hackott.tineye.com/';
+  private $apiurl = 'http://piximilar-rw.hackott.tineye.com/';
   public $image;
   public $folder;
   public $return_image;
+  public $zipid;
 
   public function __construct($image,$folder)
   {
