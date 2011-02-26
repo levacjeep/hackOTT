@@ -1,5 +1,6 @@
 <?php
   require 'pixiClass.php';
+  require_once 'showImages.php';
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -16,6 +17,20 @@
 
 <h2>A face re-maker based on the piximilar API!</h2>
 
+  <?php
+      $pixiMatch = new pixiMatch();
+  ?>
+
+  <div id="chunks">
+<?php
+echo "<xmp>";
+print_r(getChunks());
+echo "</xmp>";
+
+?>
+    <?php print getChunks();?>
+  </div>
+  
 <canvas id="ourCanvas"></canvas>
   <div class="pixi 1"><img src="images/me.jpg"/></div>
 </div>  
