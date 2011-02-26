@@ -25,7 +25,7 @@ class pixiMatch{
 
   public function printImage()
   {
-    print '<img src="'.$this->apiurl.'collection/?filepath='.$this->return_image.'"/>';
+    print '<img height="20px" width="20px" src="'.$this->apiurl.'collection/?filepath='.$this->return_image.'"/>';
   }
 }
 ?>
