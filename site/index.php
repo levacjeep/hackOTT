@@ -10,6 +10,5 @@
 <body>
   <canvas id="ourCanvas"></canvas>
   
-  
 </body>
 </html>
