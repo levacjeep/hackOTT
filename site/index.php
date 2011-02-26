@@ -1,3 +1,6 @@
+<?php
+  require 'pixiClass.php';
+?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -9,6 +12,11 @@
 </head>
 <body>
   <canvas id="ourCanvas"></canvas>
+
+
+  <?php
+      $pixiMatch = new pixiMatch();
+  ?>
   
 </body>
 </html>
