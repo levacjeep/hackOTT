@@ -17,6 +17,13 @@
 
 <h2>A face re-maker based on the piximilar API!</h2>
 
+<form name="newad" method="post" enctype="multipart/form-data" action="">
+<table>
+  <tr><td><input type="file" name="image"></td></tr>
+  <tr><td><input name="Submit" type="submit" value="Upload image"></td></tr>
+</table>
+</form>
+
 <canvas id="ourCanvas"></canvas>
   <div id="chunks">
     <?php print getChunks();?>
