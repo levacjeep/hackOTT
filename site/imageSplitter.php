@@ -6,8 +6,10 @@ function splitImage($filePath, $folder)
   $width = imagesx($image);
   $height = imagesy($image);
 
-  $blkSize = $width/32;
-  $attr['blkSize'] = $blkSize;
+  $blkSizeWidth = $width/32;
+  $blkSizeHeight = $height/32;
+  $attr['blkSizeWidth'] = $blkSizeWidth;
+  $attr['blkSizeHeight'] = $blkSizeHeight;
 
   $attr['width'] = $width;
   $attr['height'] = $height;
@@ -25,17 +27,17 @@ function splitImage($filePath, $folder)
 
   $count = 1;
 
-  for ($j = 0; $j < $height; $j += $blkSize)
+  for ($j = 0; $j < $height; $j += $blkSizeHeight)
   {
-    for ($i = 0; $i < $width; $i += $blkSize)
+    for ($i = 0; $i < $width; $i += $blkSizeWidth)
     {
       /*echo "<xmp>";
       print_r("Location x: ".$i." y: ".$j);
       echo "</xmp>";*/
 
-      $tmp_img = imagecreatetruecolor($blkSize, $blkSize);
+      $tmp_img = imagecreatetruecolor($blkSizeWidth, $blkSizeHeight);
 
-      imagecopyresized($tmp_img, $image, 0, 0, $i, $j, $blkSize, $blkSize, $blkSize, $blkSize);
+      imagecopyresized($tmp_img, $image, 0, 0, $i, $j, $blkSizeWidth, $blkSizeHeight, $blkSizeWidth, $blkSizeHeight);
 
       //write out the image
       imagejpeg($tmp_img,$folderPath."/".$count.".jpeg");

@@ -23,7 +23,7 @@
   $origImage = "submitted_images/".$_GET['filename'];
   $details = splitImage($origImage,"grant");
   
-  $imageString = showImages("grant",$details['blkSize']);
+  $imageString = showImages("grant",$details['blkSizeWidth'], $details['blkSizeHeight']);
 ?>
   <div id="chunks" style="background: transparent url(<?php print $origImage; ?>) top left no-repeat; width: <?php print $details['width']; ?>px; height: <?php print $details['height']; ?>px;">
     <?php print $imageString;?>

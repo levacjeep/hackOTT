@@ -47,7 +47,10 @@ function initialize() {
 $(document).ready(function(){
   $('#convertImage').click(function(){
     $('.pixi').each(function() {
-      $(this).load("ajax_image_loader.php?file="+$(this).attr('key')+".jpeg&folder="+$(this).attr('folder')+"&size="+$(this).attr('size'));
+      $(this).load("ajax_image_loader.php?file="
+          +$(this).attr('key')+".jpeg&folder="+$(this).attr('folder')
+          +"&width="+$(this).attr('width')
+          +'&height='+$(this).attr('height'));
       });
     });
 });
