@@ -25,7 +25,7 @@
   
   $imageString = showImages("grant",$details['blkSizeWidth'], $details['blkSizeHeight']);
 ?>
-  <div id="chunks" style="background: transparent url(<?php print $origImage; ?>) top left no-repeat; width: <?php print $details['width']; ?>px; height: <?php print $details['height']; ?>px;">
+  <div id="chunks" style="width: <?php print $details['width']; ?>px; height: <?php print $details['height']; ?>px;">
     <?php print $imageString;?>
   </div>
 </div>  
