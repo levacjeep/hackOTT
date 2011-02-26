@@ -6,7 +6,7 @@ class pixiMatch{
   public $image;
   public $folder;
   public $return_image;
-  public $zipid;
+  public $zipid='';
 
   public function __construct($image,$folder)
   {
@@ -26,10 +26,12 @@ class pixiMatch{
     $data = json_decode($data, true);
     $this->return_image = $data['result'][rand(0,9)]['filepath'];
 
-    $test = explode('_',$this->return_image);
-    $test = explode('/',$test[0]);
-
-    $this->zipid = '1'.$test[1];
+    
+    if($test = explode('_',$this->return_image));
+    {
+      if($test = explode('/',$test[0]))
+        $this->zipid = '1'.$test[1];
+    }
   }
 
   public function printImage($width, $height)
