@@ -27,10 +27,14 @@ class pixiMatch{
     $this->return_image = $data['result'][rand(0,9)]['filepath'];
 
     
-    if($test = explode('_',$this->return_image));
+    $test = explode('_',$this->return_image);
+    if($test[0])
     {
-      if($test = explode('/',$test[0]))
+      $test = explode('/',$test[0]));
+      if($test[1])
+      {
         $this->zipid = '1'.$test[1];
+      }
     }
   }
 
