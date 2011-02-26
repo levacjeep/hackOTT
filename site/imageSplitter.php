@@ -1,10 +1,13 @@
 <?php
-function splitImage($filePath, $folder, $blkSize = 20)
+function splitImage($filePath, $folder)
 {
   $attr = array();
   $image = imagecreatefromjpeg($filePath);
   $width = imagesx($image);
   $height = imagesy($image);
+
+  $blkSize = $width/32;
+  $attr['blkSize'] = $blkSize;
 
   $attr['width'] = $width;
   $attr['height'] = $height;
