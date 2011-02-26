@@ -14,9 +14,10 @@
 </head>
 <body>
 <div id="page-wrapper">
-<h1>ColorFace</h1>
+<h1>Collage Maker</h1>
 
-<h2>A face re-maker based on the piximilar API!</h2>
+<h2>An image collage maker based on the piximilar API!</h2>
+
 
 <form name="newad" method="post" enctype="multipart/form-data" action="upload.php">
 <table>
