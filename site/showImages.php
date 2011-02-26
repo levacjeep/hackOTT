@@ -27,7 +27,7 @@ function showImages($folder) {
   $imageString = '';
   foreach($images as $key=>$image)
   {
-    $imageString .= '<div class="pixi '.$key.'" key="'.$key.'"><img src="'.$path.'/'.$image.'"/></div>';
+    $imageString .= '<div class="pixi '.$key.'" key="'.$key.'" folder="'.$folder.'" ><img src="'.$path.'/'.$image.'"/></div>';
   }
 
   return $imageString;

@@ -4,11 +4,13 @@ class pixiMatch{
   //private $apiurl = 'http://piximilar-rw.hackott.tineye.com/rest/';
   private $apiurl = 'http://piximilar.hackott.tineye.com/';
   public $image;
+  public $folder;
   public $return_image;
 
-  public function __construct($image)
+  public function __construct($image,$folder)
   {
-    $this->image = '/images/chunks/'.$image;
+    $this->folder = $folder;
+    $this->image = '/images/chunks/'.$folder.'/'.$image;
     $post = 'method=color_search';
     $ch = curl_init($this->apiurl.'rest/?'.$post);
 
