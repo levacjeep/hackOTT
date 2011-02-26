@@ -21,9 +21,10 @@
 <a href="#" id="convertImage">Convert Image</a>
 <?php
   $origImage = "submitted_images/".$_GET['filename'];
-  $details = splitImage($origImage,"grant");
+  list($filename,$extension) = explode('.',$_GET['filename']);
+  $details = splitImage($origImage,$filename);
   
-  $imageString = showImages("grant",$details['blkSizeWidth'], $details['blkSizeHeight']);
+  $imageString = showImages($filename,$details['blkSizeWidth'], $details['blkSizeHeight']);
 ?>
   <div id="chunks" style="width: <?php print $details['width']; ?>px; height: <?php print $details['height']; ?>px;">
     <?php print $imageString;?>
