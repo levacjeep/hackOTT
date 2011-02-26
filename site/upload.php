@@ -56,11 +56,14 @@
         {
           echo '<h1>Copy unsuccessfull!</h1>';
           $errors=1;
-        }}}}
-
-        //If no errors registred, print the success message
-        if(isset($_POST['Submit']) && !$errors)
-        {
-            header('Location: /display.php?filename='.$image_name.'&success=true');
         }
+      }
+    }
+  }
+
+  //If no errors registred, print the success message
+  if(isset($_POST['Submit']) && !$errors)
+  {
+      header('Location: /display.php?filename='.$image_name.'&success=true');
+  }
 ?>
