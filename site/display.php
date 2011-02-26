@@ -27,11 +27,12 @@
 
 <a href="#" id="convertImage">Convert Image</a>
 <?php
-  $details = splitImage("images/grant.jpg","grant");
+  $origImage = "submitted_images/".$_GET['filename'];
+  $details = splitImage($origImage,"grant");
   
   $imageString = showImages("grant",$details['blkSize']);
 ?>
-  <div id="chunks" style="background: transparent url(images/grant.jpg) top left no-repeat; width: <?php print $details['width']; ?>px; height: <?php print $details['height']; ?>px;">
+  <div id="chunks" style="background: transparent url(<?php print $origImage; ?>) top left no-repeat; width: <?php print $details['width']; ?>px; height: <?php print $details['height']; ?>px;">
     <?php print $imageString;?>
   </div>
 </div>  
