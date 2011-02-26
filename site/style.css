@@ -16,3 +16,12 @@ h2{
   width: 1080px;
   margin: 0 auto;
 }
+
+div.pixi{
+  float: left;
+  height: 20px;
+}
+
+#chunks{
+  width: 640px;
+}
