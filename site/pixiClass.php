@@ -24,14 +24,14 @@ class pixiMatch{
     curl_close($ch); 
 
     $data = json_decode($data, true);
-    $this->return_image = $data['result'][rand(0,9)]['filepath'];
+    $this->return_image = $data['result'][rand(0,count($data['result'])-1)]['filepath'];
 
     
     $test = explode('_',$this->return_image);
     if($test[0])
     {
-      $test = explode('/',$test[0]));
-      if($test[1])
+      $test = explode('/',$test[0]);
+      if(isset($test[1]))
       {
         $this->zipid = '1'.$test[1];
       }
