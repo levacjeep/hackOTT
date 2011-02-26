@@ -1,5 +1,6 @@
 <?php
   require 'pixiClass.php';
+  require_once 'showImages.php';
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -17,6 +18,16 @@
   <?php
       $pixiMatch = new pixiMatch();
   ?>
+
+  <div id="chunks">
+<?php
+echo "<xmp>";
+print_r(getChunks());
+echo "</xmp>";
+
+?>
+    <?php print getChunks();?>
+  </div>
   
 </body>
 </html>
