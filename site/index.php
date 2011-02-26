@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="page-wrapper">
-<h1>Color Face</h1>
+<h1>ColorFace</h1>
 
 <h2>A face re-maker based on the piximilar API!</h2>
 
