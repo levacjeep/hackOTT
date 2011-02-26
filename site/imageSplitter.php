@@ -8,6 +8,9 @@ function splitImage($filePath, $folder)
 
   $blkSizeWidth = $width/32;
   $blkSizeHeight = $height/32;
+  if($blkSizeHeight <= 15) $blkSizeHeight = 20;
+  if($blkSizeWidth <= 15) $blkSizeWidth = 20;
+
   $attr['blkSizeWidth'] = $blkSizeWidth;
   $attr['blkSizeHeight'] = $blkSizeHeight;
 

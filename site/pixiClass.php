@@ -10,8 +10,8 @@ class pixiMatch{
   public function __construct($image,$folder)
   {
     $this->folder = $folder;
-    $this->image = '/images/chunks/'.$folder.'/'.$image;
-    
+    $this->image = 'images/chunks/'.$folder.'/'.$image;
+
     $post = 'method=color_search';
     $ch = curl_init($this->apiurl.'rest/?'.$post);
 
@@ -23,7 +23,7 @@ class pixiMatch{
     curl_close($ch); 
 
     $data = json_decode($data, true);
-    $this->return_image = $data['result'][0]['filepath'];
+    $this->return_image = $data['result'][rand(0,9)]['filepath'];
   }
 
   public function printImage($width, $height)
