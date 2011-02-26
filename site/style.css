@@ -22,4 +22,13 @@ div.pixi{
 }
 
 #chunks{
+  margin-top: 20px;
+}
+
+a:link, a:visited {
+  color: #fff;
+}
+
+a:hover, a:active {
+  color: #ddd;
 }
