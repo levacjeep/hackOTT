@@ -14,9 +14,9 @@
 </head>
 <body>
 <div id="page-wrapper">
-<h1>Collage Maker</h1>
+<h1>Zip Yo Face</h1>
 
-<h2>An image collage maker based on the piximilar API!</h2>
+<h2>An image collage maker based on the piximilar API with Zip movie covers!</h2>
 
 <a href="#" id="convertImage">Convert Image</a>
 <?php
