@@ -11,6 +11,7 @@ class pixiMatch{
   {
     $this->folder = $folder;
     $this->image = '/images/chunks/'.$folder.'/'.$image;
+    
     $post = 'method=color_search';
     $ch = curl_init($this->apiurl.'rest/?'.$post);
 
