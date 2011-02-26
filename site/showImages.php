@@ -14,7 +14,7 @@ function getChunks() {
       //strip out the int from the filename
       list($folder,$key) = str_split($info['filename'],6);
 
-      $images[$key] = $key.".jpg";
+      $images[$key] = $key.".jpeg";
       $total++;
     }
   }
@@ -24,23 +24,11 @@ function getChunks() {
   //resort the array properly
   ksort($images);
 
-  echo "<xmp>";
-  print_r("Total Images: ".$total);
-  echo "</xmp>";
-  echo "<xmp>";
-  print_r($images);
-  echo "</xmp>";
-
   $imageString = '';
   foreach($images as $image)
   {
-    $imageString .= '<img src="'.$path.$image.'"/>';
+    $imageString .= '<div class="pixi '.$key.'"><img src="'.$path.'/'.$image.'"/></div>';
   }
 
-  echo "<xmp>";
-  print_r($imageString);
-  echo "</xmp>";
-  die;
   return $imageString;
-
 }

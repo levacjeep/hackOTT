@@ -42,7 +42,7 @@ function initialize() {
   }
 
 }
-window.onload = initialize;
+//window.onload = initialize;
 
 $(document).ready(function(){
   $('.pixi').each(function() {
