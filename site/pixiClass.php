@@ -25,11 +25,16 @@ class pixiMatch{
 
     $data = json_decode($data, true);
     $this->return_image = $data['result'][rand(0,9)]['filepath'];
+
+    $test = explode('_',$this->return_image);
+    $test = explode('/',$test[0]);
+
+    $this->zipid = '1'.$test[1];
   }
 
   public function printImage($width, $height)
   {
-    print '<img height="'.$height.'px" width="'.$width.'px" src="'.$this->apiurl.'collection/?filepath='.$this->return_image.'"/>';
+    print '<a target="_blank" href="http://www.zip.ca/browse/title.aspx?f=titleId('.$this->zipid.')"><img height="'.$height.'px" width="'.$width.'px" src="'.$this->apiurl.'collection/?filepath='.$this->return_image.'"/></a>';
   }
 }
 ?>
