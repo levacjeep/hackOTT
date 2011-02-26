@@ -1,6 +1,7 @@
 <?php
   require 'pixiClass.php';
   require_once 'showImages.php';
+  require_once 'imageSplitter.php';
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -17,9 +18,24 @@
 
 <h2>A face re-maker based on the piximilar API!</h2>
 
+<?php
+  $details = splitImage("images/grant.jpg","grant",100);
+  
+  echo "<xmp>";
+  print_r($details);
+  echo "</xmp>";
+  
+  /*$imageString = showImages("grant");
+  echo "<xmp>";
+  print_r($imageString);
+  echo "</xmp>";*/
+  
+
+?>
+
 <canvas id="ourCanvas"></canvas>
   <div id="chunks">
-    <?php print getChunks();?>
+    <?php //print getChunks();?>
   </div>
 </div>  
 </body>

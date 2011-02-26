@@ -1,6 +1,6 @@
 <?php
-function getChunks() {
-  $path = "images/chunks";
+function showImages($folder) {
+  $path = "images/chunks/".$folder;
   $dir = opendir($path);
 
   $total = 0;
