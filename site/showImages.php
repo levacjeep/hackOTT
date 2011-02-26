@@ -9,10 +9,10 @@ function showImages($folder) {
   while (false !== ($fname = readdir($dir)))
   {
     $info = pathinfo($path.$fname);
-    if(strtolower($info['extension'] == 'jpeg'))
+    if(strtolower($info['extension']) == 'jpeg')
     {
       //strip out the int from the filename
-      list($folder,$key) = str_split($info['filename'],6);
+      list($folder,$key) = str_split($info['filename'],strlen($folder));
 
       $images[$key] = $key.".jpeg";
       $total++;

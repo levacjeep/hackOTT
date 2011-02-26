@@ -19,23 +19,21 @@
 <h2>A face re-maker based on the piximilar API!</h2>
 
 <?php
-  $details = splitImage("images/grant.jpg","grant",100);
+  $details = splitImage("images/grant.jpg","grant",20);
   
-  echo "<xmp>";
+  /*echo "<xmp>";
   print_r($details);
-  echo "</xmp>";
-  
-  /*$imageString = showImages("grant");
-  echo "<xmp>";
-  print_r($imageString);
   echo "</xmp>";*/
   
-
+  $imageString = showImages("grant");
+  /*echo "<xmp>";
+  print_r($imageString);
+  echo "</xmp>";*/
 ?>
 
-<canvas id="ourCanvas"></canvas>
-  <div id="chunks">
-    <?php //print getChunks();?>
+<!--<canvas id="ourCanvas"></canvas>-->
+  <div id="chunks" style="width: <?php print $details['width']; ?>px; height: <?php print $details['height']; ?>px;">
+    <?php print $imageString;?>
   </div>
 </div>  
 </body>
