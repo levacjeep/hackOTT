@@ -1,0 +1,18 @@
+body{
+  font-family: Arial;
+  background: url('style_images/gradient.php.jpg') repeat-x #2480DB;
+  color: #fff;
+}
+
+h1{
+  font-size: 72px;
+}
+
+h2{
+  font-size: 22px;
+}
+
+#page-wrapper{
+  width: 1080px;
+  margin: 0 auto;
+}
