@@ -28,7 +28,7 @@
 <a href="#" id="convertImage">Convert Image</a>
 <?php
   $size = 20;
-  $details = splitImage("images/grant.jpg","grant",$size);
+  $details = splitImage("submitted_images/".$_GET['filename'],"grant",$size);
   
   $imageString = showImages("grant",$size);
 ?>
