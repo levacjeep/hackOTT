@@ -45,7 +45,8 @@ function initialize() {
 //window.onload = initialize;
 
 $(document).ready(function(){
-  $('#convertImage').click(function(){
+  $('#convertImage').click(function(event){
+    event.preventDefault();
     $('.pixi').each(function() {
       $(this).load("ajax_image_loader.php?file="
           +$(this).attr('key')+".jpeg&folder="+$(this).attr('folder')
