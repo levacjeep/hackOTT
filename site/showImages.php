@@ -25,7 +25,7 @@ function getChunks() {
   ksort($images);
 
   $imageString = '';
-  foreach($images as $image)
+  foreach($images as $key=>$image)
   {
     $imageString .= '<div class="pixi '.$key.'"><img src="'.$path.'/'.$image.'"/></div>';
   }
