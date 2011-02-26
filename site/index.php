@@ -17,14 +17,7 @@
 
 <h2>A face re-maker based on the piximilar API!</h2>
 
-  <?php
-      $pixiMatch = new pixiMatch();
-  ?>
-
-  
 <canvas id="ourCanvas"></canvas>
-  <div class="pixi 1"><img src="images/me.jpg"/></div>
-
   <div id="chunks">
     <?php print getChunks();?>
   </div>

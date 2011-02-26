@@ -6,9 +6,9 @@ class pixiMatch{
   public $image;
   public $return_image;
 
-  public function __construct($image = 'me.jpg')
+  public function __construct($image)
   {
-    $this->image = '/images/'.$image;
+    $this->image = '/images/chunks/'.$image;
     $post = 'method=color_search';
     $ch = curl_init($this->apiurl.'rest/?'.$post);
 
