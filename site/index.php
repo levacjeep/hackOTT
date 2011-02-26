@@ -1,6 +1,7 @@
 <?php
   require 'pixiClass.php';
   require_once 'showImages.php';
+  require_once 'imageSplitter.php';
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -24,9 +25,13 @@
 </table>
 </form>
 
-<canvas id="ourCanvas"></canvas>
-  <div id="chunks">
-    <?php print getChunks();?>
+<?php
+  $details = splitImage("images/grant.jpg","grant",20);
+  
+  $imageString = showImages("grant");
+?>
+  <div id="chunks" style="width: <?php print $details['width']; ?>px; height: <?php print $details['height']; ?>px;">
+    <?php print $imageString;?>
   </div>
 </div>  
 </body>

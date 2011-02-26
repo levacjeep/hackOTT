@@ -46,6 +46,6 @@ function initialize() {
 
 $(document).ready(function(){
   $('.pixi').each(function() {
-    $(this).load("ajax_image_loader.php?file="+$(this).attr('key')+".jpeg");
+    //$(this).load("ajax_image_loader.php?file="+$(this).attr('key')+".jpeg");
     });
 });
